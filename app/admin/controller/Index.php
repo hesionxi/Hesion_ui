@@ -1,8 +1,6 @@
 <?php
 
-
 namespace app\admin\controller;
-
 
 use app\admin\model\Test;
 use think\facade\View;
@@ -45,5 +43,10 @@ class Index
         $iv = '';                           //  密码初始向量（要跟密码加密时的一样）
         $res = openssl_decrypt($data, $method, $passwd, $options, $iv);
         dump($res);
+    }
+
+    // 更新数据
+    public function update() {
+        
     }
 }
