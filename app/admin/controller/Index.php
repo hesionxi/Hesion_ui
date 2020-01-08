@@ -4,6 +4,7 @@ namespace app\admin\controller;
 
 use app\admin\model\Test;
 use think\facade\View;
+use think\Request;
 
 
 class Index
@@ -46,7 +47,8 @@ class Index
     }
 
     // 更新数据
-    public function update() {
-        
+    public function update(Request $request) {
+        $re = $request->get();
+        dump($re);
     }
 }
