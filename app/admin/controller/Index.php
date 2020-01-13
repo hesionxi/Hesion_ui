@@ -16,8 +16,9 @@ class Index
 
     public function home() {
 //        $re = Test::where('test_age', '>',10)->order('test_id', 'desc')->limit(1)->select();
-        $re = Test::select();
-        dump($re) ;
+//        $re = Test::select();
+//        dump($re) ;
+        return '这个是home方法';
     }
 
     // 密码加密

@@ -10,7 +10,7 @@ class Index extends BaseController
     {
 //        $re = Db::query('SELECT * FROM `web_test`');
 //        dump($re);
-        return 'admin\index\index';
+        return '首页index控制器的index方法';
     }
 
     public function hello($name = 'ThinkPHP6')
