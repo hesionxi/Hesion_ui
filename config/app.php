@@ -36,6 +36,6 @@ return [
 
     // 应用映射
 	'app_map' => [
-		'think'  =>  'admin',  // 把admin应用映射为think
+		'hui'  =>  'admin',  // 把admin应用映射为hui
 	],
 ];

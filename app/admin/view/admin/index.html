@@ -12,38 +12,39 @@
 <body>
 	
 	<article class="page-container">
-		<form class="form form-horizontal" id="form-admin-add" action="{:url('admin/index/update')}">
+		<form class="form form-horizontal" id="form-admin-add" action="{:url('hui/test/save')}" method="post">
+			{:token_field()}
 			<div class="row cl">
 				<label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>管理员：</label>
 				<div class="formControls col-xs-8 col-sm-9">
-					<input type="text" class="input-text" value="" placeholder="" id="adminName" name="admin_name">
+					<input type="text" class="input-text" value="" placeholder="" id="adminName" name="name">
 				</div>
 			</div>
 			<div class="row cl">
 				<label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>初始密码：</label>
 				<div class="formControls col-xs-8 col-sm-9">
-					<input type="password" class="input-text" autocomplete="off" value="" placeholder="密码" id="password" name="admin_pwd">
+					<input type="password" class="input-text" autocomplete="off" value="" placeholder="密码" id="password" name="pwd">
 				</div>
 			</div>
 			<div class="row cl">
 				<label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>确认密码：</label>
 				<div class="formControls col-xs-8 col-sm-9">
-					<input type="password" class="input-text" autocomplete="off"  placeholder="确认新密码" id="password2" name="admin_repwd">
+					<input type="password" class="input-text" autocomplete="off"  placeholder="确认新密码" id="password2" name="repwd">
 				</div>
 			</div>
 			<div class="row cl">
 				<label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>性别：</label>
 				<div class="formControls col-xs-8 col-sm-9 skin-minimal">
 					<div class="radio-box">
-						<input name="sex" type="radio" id="admin_sex">
+						<input name="sex" type="radio" id="sex-1" value="1">
 						<label for="sex-1">男</label>
 					</div>
 					<div class="radio-box">
-						<input type="radio" id="sex-2" name="admin_sex">
+						<input type="radio" id="sex-2" name="sex" value="0">
 						<label for="sex-2">女</label>
 					</div>
 					<div class="radio-box">
-						<input type="radio" id="sex-3" name="admin_sex" checked>
+						<input type="radio" id="sex-3" name="sex" value="2" checked>
 						<label for="sex-3">未知</label>
 					</div>
 				</div>
@@ -51,19 +52,19 @@
 			<div class="row cl">
 				<label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>手机：</label>
 				<div class="formControls col-xs-8 col-sm-9">
-					<input type="text" class="input-text" value="" placeholder="" id="phone" name="admin_phone">
+					<input type="text" class="input-text" value="" placeholder="" id="phone" name="phone">
 				</div>
 			</div>
 			<div class="row cl">
 				<label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>邮箱：</label>
 				<div class="formControls col-xs-8 col-sm-9">
-					<input type="text" class="input-text" placeholder="@" name="email" id="admin_email">
+					<input type="text" class="input-text" placeholder="@" name="email" id="email">
 				</div>
 			</div>
 			<div class="row cl">
 				<label class="form-label col-xs-4 col-sm-3">角色：</label>
 				<div class="formControls col-xs-8 col-sm-9"> <span class="select-box" style="width:150px;">
-				<select class="select" name="admin_power" size="1">
+				<select class="select" name="power" size="1">
 					<option value="0">超级管理员</option>
 					<option value="1">总编</option>
 					<option value="2">栏目主辑</option>
@@ -74,7 +75,7 @@
 			<div class="row cl">
 				<label class="form-label col-xs-4 col-sm-3">备注：</label>
 				<div class="formControls col-xs-8 col-sm-9">
-					<textarea name="admin_order" cols="" rows="" class="textarea"  placeholder="说点什么...100个字符以内" dragonfly="true" onKeyUp="$.Huitextarealength(this,100)"></textarea>
+					<textarea name="order" cols="" rows="" class="textarea"  placeholder="说点什么...100个字符以内" dragonfly="true" onKeyUp="$.Huitextarealength(this,100)"></textarea>
 					<p class="textarea-numberbar"><em class="textarea-length">0</em>/100</p>
 				</div>
 			</div>
